@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000;
+    --second-color: #5f5d65;
+    --main-color: #f75023;
+    --big-font: 3.6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+body {
+    background: var(--bg--color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;
+    transition: .3s;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 130px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 27px;
+}
+
+.navbar a::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    bottom: -3px;
+    left: 0;
+    transition: ease .40s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    padding: 100px 18%;
+}
+
+.home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: url(Images/background.avif);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 4rem;
+}
+
+.home-text h2, .skills h2, .prohead h2, .container h2{
+    margin: 10px 0px 25px;
+    font-size: var(--big-font);
+    line-height: 1;
+    font-weight: 500;
+}
+
+.home-text h5 {
+    margin-bottom: 23px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-text h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.home-text p, .about-text p {
+    font-size: var(--p-font);
+    color: var(--second-color);
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 22px;
+    margin-bottom: 25px;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    font-size: 25px;
+    transition: .5s;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--bg--color);
+    background: violet;
+    font-size: var(--p-font);
+    padding: 10px 30px;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius: 30px;
+    transition: ease .40s;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+.btn a{
+    color:white;
+    font-size: 600;
+}
+.home-img img, .about-img img{
+    max-width: 100%;
+    width:350px;
+    height: auto;
+}
+.about-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+}
+.about-img img{
+    border-radius: 10%;
+}
+.about, .skills, .projects{
+    min-height: 100vh;
+    height: 80%;
+    width: 100%;
+    background: url(Images/aboutbgg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.skills, .contact{
+    min-height: 100vh;
+    height: 80%;
+    width: 100%;
+    background:url(Images/background.avif);
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+}
+.skill, .prohead, .footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.skill-img {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+.skill-img img {
+    margin-left: 20px;
+    flex: 1;
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out; 
+}
+.skill-img img:hover {
+    transform: scale(1.2); 
+}
+.width img{
+    max-width: 300px;
+    height: auto;
+}
+.container h3{
+    font-size: 30px;
+    color:var(--second-color);
+}
+.box{
+    width:50%;
+    background: #e5cbf1;
+    height:5vh;
+    border:2px solid voilet;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
